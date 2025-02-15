@@ -1,0 +1,146 @@
+/*  Global Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  margin: 0;
+  padding: 20px;
+  color: white;
+  transition: background 0.5s ease-in-out;
+}
+
+/*  App Container with Glassmorphism Effect */
+.app {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 420px;
+  transition: transform 0.3s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/*  Input Field */
+input {
+  padding: 14px;
+  margin: 12px;
+  font-size: 16px;
+  width: 90%;
+  max-width: 320px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+  border-color: #00d4ff;
+  box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.8);
+  outline: none;
+}
+
+/* Button with Neon Effect */
+button {
+  padding: 14px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00d4ff, #0084ff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
+}
+
+/*  Error Message */
+.error {
+  color: #ff4b5c;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Weather Card */
+.weather-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 22px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto 0; /* ✅ Added margin-top for spacing */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  animation: slideUp 0.5s ease-in-out;
+  color: white;
+}
+
+/*  Smooth Entrance Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/*  Loading Spinner */
+.loader {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #00d4ff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*  Background Animation */
+@keyframes backgroundMove {
+  0% { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+  50% { background: linear-gradient(135deg, #0072ff, #00c6ff); }
+  100% { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+}
+
+body {
+  animation: backgroundMove 10s infinite alternate ease-in-out;
+}
+
+/*  Responsive Design */
+@media (max-width: 480px) {
+  .app {
+    width: 95%;
+    padding: 18px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .weather-card {
+    max-width: 320px;
+  }
+}
