@@ -11,7 +11,7 @@ A **React + Vite** weather application that fetches real-time weather data using
 
 ### **1️⃣ Clone the Repository**  
 ```sh
-[git clone https://github.com/your-username/weather-app-datalogz.git](https://github.com/imran7862/datalogz-Weather-app.git)
+[git clone (https://github.com/imran7862/datalogz-Weather-app.git)
 cd weather-app-datalogz
 
 2️⃣ Install Dependencies
